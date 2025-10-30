@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">LoginApp</string>
+    <string name="app_name">기록일지</string>
+    <string name="add_album">앨범 추가</string>
+    <string name="add_photo">사진 추가</string>
+    <string name="album_title">제목</string>
+    <string name="album_date">날짜 / 기간</string>
+    <string name="album_memo">메모</string>
+    <string name="save">저장</string>
+    <string name="cancel">취소</string>
+    <string name="delete">삭제</string>
+    <string name="edit">수정</string>
+    <string name="empty_albums">아직 추억이 없어요.\n새로운 폴라로이드를 만들어보세요!</string>
+    <string name="empty_photos">앨범에 사진을 추가해보세요</string>
+    <string name="select_image">이미지 선택</string>
+    <string name="photo_limit">사진은 최대 20장까지 추가할 수 있어요</string>
 </resources>

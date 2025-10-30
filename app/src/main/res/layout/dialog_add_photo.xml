@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/cream_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="사진 추가"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:fontFamily="casual"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Photo Preview -->
+    <ImageView
+        android:id="@+id/photoPreview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:background="@color/accent_yellow"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="Photo Preview"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSelectPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_image"
+        android:layout_marginBottom="16dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+    <!-- Date Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="날짜 (선택사항)"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPhotoDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:fontFamily="casual"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Memo Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="메모 (선택사항)"
+        android:layout_marginBottom="16dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPhotoMemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:fontFamily="casual"
+            android:gravity="top"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            style="@style/Widget.Material3.Button.TextButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSavePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/accent_blue"/>
+
+    </LinearLayout>
+
+</LinearLayout>

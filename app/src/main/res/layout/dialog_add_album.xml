@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/cream_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="새 앨범 만들기"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:fontFamily="casual"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Cover Image Preview -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp"
+        android:backgroundTint="@color/polaroid_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/previewImage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:background="@color/accent_yellow"
+                android:contentDescription="Preview"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSelectImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="사진 선택"
+                android:textSize="10sp"
+                android:padding="4dp"
+                style="@style/Widget.Material3.Button.TextButton"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Title Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/album_title"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:fontFamily="casual"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Date Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/album_date"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:fontFamily="casual"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Memo Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/album_memo"
+        android:layout_marginBottom="16dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editMemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:fontFamily="casual"
+            android:gravity="top"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            style="@style/Widget.Material3.Button.TextButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/accent_pink"/>
+
+    </LinearLayout>
+
+</LinearLayout>

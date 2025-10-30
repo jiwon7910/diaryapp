@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/cream_background"
+            app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+            app:titleTextColor="@color/text_primary"/>
+
+        <!-- Album Info Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/polaroid_white"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/albumTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Album Title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:fontFamily="cursive"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/albumDateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2024.07"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/albumMemoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="메모"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- Empty State -->
+        <TextView
+            android:id="@+id/emptyPhotosText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/empty_photos"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:padding="32dp"
+            android:fontFamily="casual"
+            android:visibility="gone"/>
+
+        <!-- Photos Grid -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/photosRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:clipToPadding="false"/>
+
+    </LinearLayout>
+
+    <!-- FAB for adding photos -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_input_add"
+        android:contentDescription="@string/add_photo"
+        app:backgroundTint="@color/accent_blue"
+        app:tint="@color/white"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

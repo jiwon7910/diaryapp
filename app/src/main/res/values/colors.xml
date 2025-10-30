@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- Polaroid Theme Colors -->
+    <color name="cream_background">#FFF8F0</color>
+    <color name="polaroid_white">#FFFEF9</color>
+    <color name="polaroid_shadow">#33000000</color>
+    <color name="text_primary">#4A4A4A</color>
+    <color name="text_secondary">#8B8B8B</color>
+    <color name="accent_pink">#FFB6C1</color>
+    <color name="accent_blue">#B0E0E6</color>
+    <color name="accent_yellow">#FFF9C4</color>
+    <color name="handwriting_color">#5D4E37</color>
 </resources>
