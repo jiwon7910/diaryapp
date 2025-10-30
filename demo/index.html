@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기록일지 - 폴라로이드 앨범</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="app-title">기록일지</h1>
+        </header>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state">
+            <p>아직 추억이 없어요.<br>새로운 폴라로이드를 만들어보세요!</p>
+        </div>
+
+        <!-- Albums Grid -->
+        <div id="albumsGrid" class="albums-grid"></div>
+
+        <!-- FAB Button -->
+        <button class="fab" id="addAlbumBtn" title="앨범 추가">
+            <span>+</span>
+        </button>
+    </div>
+
+    <!-- Add Album Modal -->
+    <div id="albumModal" class="modal">
+        <div class="modal-content">
+            <h2>새 앨범 만들기</h2>
+            
+            <div class="preview-polaroid">
+                <div class="preview-image" id="previewImage">
+                    <span class="preview-placeholder">사진을 선택하세요</span>
+                </div>
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                <button class="btn-secondary" onclick="document.getElementById('imageInput').click()">사진 선택</button>
+            </div>
+
+            <div class="form-group">
+                <label>제목</label>
+                <input type="text" id="albumTitle" placeholder="예: 여름휴가" class="input-field">
+            </div>
+
+            <div class="form-group">
+                <label>날짜 / 기간</label>
+                <input type="text" id="albumDate" placeholder="예: 2024.07" class="input-field">
+            </div>
+
+            <div class="form-group">
+                <label>메모</label>
+                <textarea id="albumMemo" placeholder="이 추억에 대한 메모를 남겨보세요..." class="textarea-field"></textarea>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="btn-cancel" id="cancelBtn">취소</button>
+                <button class="btn-save" id="saveBtn">저장</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Album Detail Modal -->
+    <div id="albumDetailModal" class="modal">
+        <div class="modal-content album-detail">
+            <button class="close-btn" id="closeDetailBtn">✕</button>
+            
+            <div class="album-header">
+                <h2 id="detailTitle">앨범 제목</h2>
+                <p id="detailDate" class="detail-date">2024.07</p>
+                <p id="detailMemo" class="detail-memo"></p>
+            </div>
+
+            <div id="photosEmpty" class="photos-empty">
+                앨범에 사진을 추가해보세요
+            </div>
+
+            <div id="photosGrid" class="photos-grid"></div>
+
+            <button class="fab fab-small" id="addPhotoBtn" title="사진 추가">+</button>
+        </div>
+    </div>
+
+    <!-- Add Photo Modal -->
+    <div id="photoModal" class="modal">
+        <div class="modal-content">
+            <h2>사진 추가</h2>
+            
+            <div class="photo-preview" id="photoPreview">
+                <span class="preview-placeholder">사진을 선택하세요</span>
+            </div>
+            <input type="file" id="photoInput" accept="image/*" style="display: none;">
+            <button class="btn-secondary" onclick="document.getElementById('photoInput').click()">사진 선택</button>
+
+            <div class="form-group">
+                <label>날짜 (선택사항)</label>
+                <input type="text" id="photoDate" placeholder="예: 2024.07.15" class="input-field">
+            </div>
+
+            <div class="form-group">
+                <label>메모 (선택사항)</label>
+                <textarea id="photoMemo" placeholder="이 사진에 대한 메모..." class="textarea-field"></textarea>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="btn-cancel" id="cancelPhotoBtn">취소</button>
+                <button class="btn-save" id="savePhotoBtn">저장</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

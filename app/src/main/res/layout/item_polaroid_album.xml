@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="200dp"
+    android:layout_margin="12dp"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="4dp"
+    app:cardBackgroundColor="@color/polaroid_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Photo Area -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/albumCoverImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@color/accent_blue"
+                android:contentDescription="Album Cover"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Handwriting Text Area (bottom of polaroid) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/albumTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="여름휴가"
+                android:textSize="14sp"
+                android:textColor="@color/handwriting_color"
+                android:fontFamily="cursive"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/albumDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2024.07"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="cursive"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
